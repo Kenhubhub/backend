@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const {getJobs,postJob,updateJob,updateStatus,deleteJob} = require("controllers/jobsController")
+const {getJobs,postJob,updateJob,updateStatus,deleteJob} = require("./controllers/jobsController")
 //environment variables
 const dotenv = require("dotenv").config();
 const port = process.env.PORT;
