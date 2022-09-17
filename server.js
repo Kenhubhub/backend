@@ -9,7 +9,9 @@ const dbConnection  = require("./db/db");
 dbConnection();
 app.use(express.json());
 app.use(express.urlencoded({extended:false}))
-
+app.get("/", (req,res) => {
+    res.send("this works");
+})
 //goal routes
 app.use("api/jobs", require("./routes/jobRoutes"));
 
