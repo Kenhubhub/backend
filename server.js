@@ -9,9 +9,7 @@ const dbConnection  = require("./db/db");
 dbConnection();
 app.use(express.json());
 app.use(express.urlencoded({extended:false}))
-app.get("/", (req,res) => {
-    res.send("this works");
-})
+
 app.get("/", getJobs)
 //POST
 app.post("/",postJob)
