@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}))
 
 //goal routes
-app.use("https://jobapplicationsapi.herokuapp.com/api/jobs", require("./routes/jobRoutes"));
+app.use("api/jobs", require("./routes/jobRoutes"));
 
 app.listen(port || 5000, (req,res) =>{
     console.log(`listening on port ${port}`)    
