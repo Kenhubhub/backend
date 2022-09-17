@@ -10,17 +10,17 @@ dbConnection();
 app.use(express.json());
 app.use(express.urlencoded({extended:false}))
 
-app.get("/", getJobs)
-//POST
-app.post("/",postJob)
+// app.get("/", getJobs)
+// //POST
+// app.post("/",postJob)
 
-//DELETE
-app.delete("/:id", deleteJob);
-//UPDATE
-app.put("/:id", updateJob);
-app.put("/status/:id",updateStatus);
+// //DELETE
+// app.delete("/:id", deleteJob);
+// //UPDATE
+// app.put("/:id", updateJob);
+// app.put("/status/:id",updateStatus);
 //goal routes
-app.use("api/jobs", require("./routes/jobRoutes"));
+app.use("/api/jobs", require("./routes/jobRoutes"));
 
 app.listen(port || 5000, (req,res) =>{
     console.log(`listening on port ${port}`)    
