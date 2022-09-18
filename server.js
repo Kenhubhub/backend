@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}))
 
 app.use(cors({
-    origin: "https://heartfelt-pegasus-34387a.netlify.app/",
+    origin: "https://heartfelt-pegasus-34387a.netlify.app",
 }))
 app.use("/api/jobs", require("./routes/jobRoutes"));
 
