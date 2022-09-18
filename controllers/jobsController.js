@@ -17,12 +17,13 @@ const getJobs = asyncHandler(async(req,res) =>{
 //POST api/jobs
 const postJob = asyncHandler(async (req,res) =>{
     const response = req.body;
-    const {title,status,company,link} = response;
+    const {title,status,company,link,dateApplied} = response;
     const job = await Job.create({
         title,
         status,
         link,
-        company
+        company,
+        dateApplied
     })
     res.json(job);
 })

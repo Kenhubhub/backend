@@ -9,7 +9,8 @@ const jobSchema = mongoose.Schema({
       required: true  
     },
     link: String,
-    company: String
+    company: String,
+    dateApplied: String
 },{
     timestamps: true
 })
